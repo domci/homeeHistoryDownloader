@@ -85,5 +85,5 @@ for id in node_id:
         print('Node ID ' + str(id) + ' cannot be downloaded!')
         continue
     i = i + 1
-    time.sleep(1)
+    time.sleep(5)
 
