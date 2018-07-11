@@ -3,7 +3,7 @@
 This short Script will download all Device History Zip-Files from homee Webapp to your default (Chrome) download directory.
 
 Just download ChromeDriver from http://chromedriver.chromium.org/download 
-and change inputs in the Script accordingly (enter your homee ID, username and password).
+and change inputs in the Script accordingly (enter your homee ID, username and password amd the path to ChromeDriver).
 
 Then let it do its magic.
 
