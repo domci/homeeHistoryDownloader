@@ -31,6 +31,8 @@ chromedriver = 'C:\\chromedriver.exe'# Path to chromedriver.exe (Backslashes mus
 
 
 
+
+
 browser = webdriver.Chrome(chromedriver)
 browser.get('http://my.hom.ee')
 
@@ -71,14 +73,17 @@ for node in li:
     node_id.append(int(node.get_attribute("href").replace('#!/deviceslist/device/id/','')))
 
 
+node_id[15]
 
-
-
+i = 1
 for id in node_id:
-    print(id)
-    browser.get('https://my.hom.ee/#!/deviceslist/device/id/'+str(id)+'/edit')
-    browser.find_element_by_xpath("//li[@ng-click='exportNodeHistory()']/div").click()
-    time.sleep(2)
-
-
+    print('Downloading Node ID: ' + str(id))
+    try:
+        browser.get('https://my.hom.ee/#!/deviceslist/device/id/'+str(id)+'/edit')
+        browser.find_element_by_xpath("//li[@ng-click='exportNodeHistory()']/div").click()
+    except:
+        print('Node ID ' + str(id) + ' cannot be downloaded!')
+        continue
+    i = i + 1
+    time.sleep(1)
 
