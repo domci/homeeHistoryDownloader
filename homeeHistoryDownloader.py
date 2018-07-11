@@ -73,7 +73,6 @@ for node in li:
     node_id.append(int(node.get_attribute("href").replace('#!/deviceslist/device/id/','')))
 
 
-node_id[15]
 
 i = 1
 for id in node_id:
